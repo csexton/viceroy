@@ -3,6 +3,9 @@ let g:ruby_minlines = 500
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
+" Command-T settings need to be loaded before plugins are
+let g:CommandTMaxHeight=20
+
 let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1
 let g:NERDShutUp = 1

@@ -1,4 +1,3 @@
-echo "all your base"
 syntax on
 filetype plugin indent on
 set autoindent
@@ -134,7 +133,7 @@ augroup settings
 augroup END
 
 " colorscheme risto
-"set background=dark
+set background=dark
 "try
 "  colorscheme solarized
 "catch /^Vim\%((\a\+)\)\=:E185/
@@ -142,8 +141,8 @@ augroup END
 "endtry
 "autocmd GuiEnter * set guifont=Anonymous\ Pro:h16,Monaco:h16
 
-" Command-T settings need to be loaded before plugins are
-let g:CommandTMaxHeight=20
+" Hook in bundle settings
+source ~/.vim/viceroy/bundle_settings.vim
 
 " Hook in vundle
 source ~/.vim/viceroy/vundle.vim
