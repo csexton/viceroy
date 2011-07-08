@@ -15,3 +15,4 @@ let g:surround_{char2nr('s')} = " \r"
 let g:surround_{char2nr(':')} = ":\r"
 let g:surround_indent = 1
 
+let g:solarized_visibility="low" " Let trailer trash handle whitespace

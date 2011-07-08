@@ -1,3 +1,4 @@
+echo "all your base"
 syntax on
 filetype plugin indent on
 set autoindent
@@ -134,15 +135,23 @@ augroup END
 
 " colorscheme risto
 "set background=dark
-let g:solarized_visibility="low" " Let trailer trash handle whitespace
-try
-  colorscheme solarized
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme desert
-endtry
-autocmd GuiEnter * set guifont=Anonymous\ Pro:h16,Monaco:h16
+"try
+"  colorscheme solarized
+"catch /^Vim\%((\a\+)\)\=:E185/
+"  colorscheme desert
+"endtry
+"autocmd GuiEnter * set guifont=Anonymous\ Pro:h16,Monaco:h16
 
 " Command-T settings need to be loaded before plugins are
 let g:CommandTMaxHeight=20
+
+" Hook in vundle
+source ~/.vim/viceroy/vundle.vim
+
+" TODO: do we want this at all?
+" Hook in the local vimrc
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
 
 " vim:set ft=vim et tw=78 sw=2:
