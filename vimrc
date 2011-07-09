@@ -1,9 +1,8 @@
 set nocompatible
-if filereadable(expand('~/.vim/viceroy/base.vim'))
-  source ~/.vim/viceroy/base.vim
-endif
+runtime! viceroy/base.vim
 
-set guifont=Anonymous\ Pro:h16,Monaco:h16
-"colorscheme solorized
-
+"
+" This file is part of viceroy, any local changes customizations should be
+" made in ~/.vimrc.local
+"
 

@@ -1,3 +1,8 @@
+if exists('g:loaded_preso') || &cp
+  finish
+endif
+let g:loaded_preso = 1
+
 function! Find(pattern)
   exe "vimgrep /".a:pattern."/gj **"
   exe "cw"

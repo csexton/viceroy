@@ -1,10 +1,16 @@
+if exists('g:loaded_bundle_settings') || &cp
+  finish
+endif
+let g:loaded_bundle_settings = 1
+
 let g:is_bash = 1 " Highlight all .sh files as if they were bash
 let g:ruby_minlines = 500
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
 " Command-T settings need to be loaded before plugins are
-let g:CommandTMaxHeight=20
+let g:CommandTMaxHeight=20        " limit to 20 lines0
+let g:CommandTMatchWindowAtTop=1 " show window at top
 
 let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1

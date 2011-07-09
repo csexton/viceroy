@@ -1,7 +1,7 @@
-if (exists("g:loaded_vundle_helper") && g:loaded_vundle_helper) || &cp
-    finish
-endif
-let g:loaded_vundle_helper= 1
+"if (exists("g:loaded_vundle_helper") && g:loaded_vundle_helper) || &cp
+"    finish
+"endif
+"let g:loaded_vundle_helper= 1
 
 function s:load_vundle()
   set nocompatible               " be iMproved
@@ -13,8 +13,8 @@ function s:load_vundle()
   " let Vundle manage Vundle
   Bundle 'gmarik/vundle'
 
-  if filereadable(expand('~/.vim/Bundlefile'))
-    source ~/.vim/Bundlefile
+  if filereadable(expand('~/.vim/viceroy/bundles.vim'))
+    source ~/.vim/viceroy/bundles.vim
   endif
 
   filetype plugin indent on     " required!

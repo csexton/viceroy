@@ -26,6 +26,7 @@ set list            " show trailing whiteshace and tabs
 set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗
 set modelines=5     " Debian likes to disable this
 set mousemodel=popup
+set number
 set pastetoggle=<F2>
 "set relativenumber
 set scrolloff=1     " Minimal number of screen lines to keep above and below the cursor.
@@ -51,20 +52,6 @@ if has("gui_running")
   set background=dark
 endif
 
-function! HTry(function, ...)
-  if exists('*'.a:function)
-    return call(a:function, a:000)
-  else
-    return ''
-  endif
-endfunction
-
-if &grepprg ==# 'grep -n $* /dev/null'
-  set grepprg=grep\ -rnH\ --exclude='.*.swp'\ --exclude='*~'\ --exclude='*.log'\ --exclude=tags\ $*\ /dev/null
-endif
-if &statusline == ''
-  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{HTry('CapsLockStatusline')}%y%{HTry('rails#statusline')}%{HTry('fugitive#statusline')}%{HTry('rvm#statusline')}%#ErrorMsg#%{HTry('SyntasticStatuslineFlag')}%*%=%-14.(%l,%c%V%)\ %P
-endif
 
 if $TERM == '^\%(screen\|xterm-color\)$' && t_Co == 8
   set t_Co=16
@@ -73,10 +60,8 @@ endif
 command! -bar -nargs=0 SudoW   :setl nomod|silent exe 'write !sudo tee % >/dev/null'|let &mod = v:shell_error
 command! -bar -nargs=* -bang W :write<bang> <args>
 
-"runtime! plugin/matchit.vim
-runtime! macros/matchit.vim
-
 iabbrev Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+iabbrev o_o ಠ_ಠ
 
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
@@ -98,12 +83,10 @@ augroup settings
   autocmd BufReadPost *.rb if line("'\"") > 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" | endif
 
-
   autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
         \ if isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
 
   autocmd BufNewFile,BufRead *.scss             set ft=scss.css
-  "au BufRead,BufNewFile *.scss set filetype=scss.css
   autocmd BufNewFile,BufRead *.md               set ft=markdown
   autocmd BufNewFile,BufRead *.haml             set ft=haml
   autocmd BufNewFile,BufRead *.feature,*.story  set ft=cucumber
@@ -132,21 +115,21 @@ augroup settings
   autocmd User Fugitive command! -bang -bar -buffer -nargs=* Gpr :Git<bang> pull --rebase <args>
 augroup END
 
-colorscheme vividchalk
-" colorscheme risto
+colorscheme ir_black
 set background=dark
-"try
-"catch /^Vim\%((\a\+)\)\=:E185/
-"  colorscheme solarized
-"  colorscheme desert
-"endtry
-"autocmd GuiEnter * set guifont=Anonymous\ Pro:h16,Monaco:h16
 
-" Hook in bundle settings
-source ~/.vim/viceroy/bundle_settings.vim
+" Hook in bundle settings, before we load the bundles
+runtime! viceroy/bundle_settings.vim
 
 " Hook in vundle
-source ~/.vim/viceroy/vundle.vim
+runtime! viceroy/bundle.vim
+
+runtime! macros/matchit.vim
+
+"runtime! autoload/pathogen.vim
+"if exists('g:loaded_pathogen')
+"  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundle'))
+"endif
 
 " TODO: do we want this at all?
 " Hook in the local vimrc
@@ -154,4 +137,4 @@ if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
-" vim:set ft=vim et tw=78 sw=2:
+" vim:set ft=vim et tw=78 sw=2 encoding=utf-8
