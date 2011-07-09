@@ -30,5 +30,5 @@ else
     :call s:load_vundle()
     BundleInstall
   endfunction
-  command! BundleInit :call s:bundle_init()
+  command! ViceroyInit :call s:bundle_init()
 endif

@@ -4,6 +4,6 @@ if filereadable(expand('~/.vim/viceroy/base.vim'))
 endif
 
 set guifont=Anonymous\ Pro:h16,Monaco:h16
-colorscheme solarized
+"colorscheme solorized
 
 

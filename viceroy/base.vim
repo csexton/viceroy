@@ -132,11 +132,12 @@ augroup settings
   autocmd User Fugitive command! -bang -bar -buffer -nargs=* Gpr :Git<bang> pull --rebase <args>
 augroup END
 
+colorscheme vividchalk
 " colorscheme risto
 set background=dark
 "try
-"  colorscheme solarized
 "catch /^Vim\%((\a\+)\)\=:E185/
+"  colorscheme solarized
 "  colorscheme desert
 "endtry
 "autocmd GuiEnter * set guifont=Anonymous\ Pro:h16,Monaco:h16
