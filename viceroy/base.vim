@@ -2,44 +2,41 @@ syntax on
 filetype plugin indent on
 set autoindent
 set autoread
-set autowrite       " Automatically save before commands like :next and :make
+set autowrite               " Automatically save before commands like :next and :make
 set backspace=indent,eol,start
-""set backup          " Do keep a backup file
 set backupskip+=*.tmp,crontab.*
 set cmdheight=1
-set complete-=i     " Searching includes can be slow
+set complete-=i             " Searching includes can be slow
 set dictionary+=/usr/share/dict/words
-set display=lastline " When lines are cropped at the screen bottom, show as much as possible
+set display=lastline        " When lines are cropped at the screen bottom, show as much as possible
 set expandtab
-set nofoldenable
-set gdefault        " When on, the ":substitute" flag 'g' is default on.
-set guioptions=cg   " Get rid of the scrollbar and toolbar
-set hidden          " Allow dirty unsaved buffers
-set history=1000    " Remember more history
-set hlsearch        " Highlight searches
-set ignorecase      " Ignore case in searches.
-set incsearch       " Incremental search
+set gdefault                " When on, the ":substitute" flag 'g' is default on.
+set guioptions=cg           " Get rid of the scrollbar and toolbar
+set hidden                  " Allow dirty unsaved buffers
+set history=1000            " Remember more history
+set hlsearch                " Highlight searches
+set ignorecase              " Ignore case in searches.
+set incsearch               " Incremental search
 set joinspaces
-set laststatus=2    " Always show status line
-set list            " show trailing whiteshace and tabs
-"set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+    " ,eol:¬
+set laststatus=2            " Always show status line
+set list                    " show trailing whiteshace and tabs
 set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗
-set modelines=5     " Debian likes to disable this
-set mousemodel=popup
-set number
+set modelines=5             " Debian likes to disable this
+set mousemodel=popup        "Right mouse button pops up a menu
+set number                  " Show linenumbers
 set pastetoggle=<F2>
 "set relativenumber
-set scrolloff=1     " Minimal number of screen lines to keep above and below the cursor.
-set showcmd         " Show (partial) command in status line.
-set showmatch       " Show matching brackets.
+set scrolloff=1             " Minimal number of screen lines to keep above and below the cursor.
+set showcmd                 " Show (partial) command in status line.
+set showmatch               " Show matching brackets.
 set sidescrolloff=5
-set smartcase       " Case insensitive searches become sensitive with capitals
-set smarttab        " sw at the start of the line, sts everywhere else
+set smartcase               " Case insensitive searches become sensitive with capitals
+set smarttab                " sw at the start of the line, sts everywhere else
 set spelllang=en_us
-set suffixes+=.dvi  " Lower priority in wildcards
+set suffixes+=.dvi          " Lower priority in wildcards
 set tags+=../tags,../../tags,../../../tags,../../../../tags
-set timeoutlen=1200 " A little bit more time for macros
-set ttimeoutlen=50  " Make Esc work faster
+set timeoutlen=1200         " A little bit more time for macros
+set ttimeoutlen=50          " Make Esc work faster
 set virtualedit=block
 set visualbell
 set wildignore+=*~
@@ -93,13 +90,13 @@ augroup settings
   autocmd BufRead * if ! did_filetype() && getline(1)." ".getline(2).
         \ " ".getline(3) =~? '<\%(!DOCTYPE \)\=html\>' | setf html | endif
 
-  autocmd FileType javascript,coffee      setlocal et sw=2 sts=2 isk+=$
-  autocmd FileType html,xhtml,css,scss    setlocal et sw=2 sts=2
-  autocmd FileType eruby,yaml,ruby        setlocal et sw=2 sts=2
-  autocmd FileType cucumber               setlocal et sw=2 sts=2
-  autocmd FileType gitcommit              setlocal spell
-  autocmd FileType ruby                   setlocal comments=:#\  tw=79
-  autocmd FileType vim                    setlocal et sw=2 sts=2 keywordprg=:help
+  autocmd FileType javascript,coffee            setlocal et sw=2 sts=2 isk+=$
+  autocmd FileType html,xhtml,css,scss.css      setlocal et sw=2 sts=2
+  autocmd FileType eruby,yaml,ruby              setlocal et sw=2 sts=2
+  autocmd FileType cucumber                     setlocal et sw=2 sts=2
+  autocmd FileType gitcommit                    setlocal spell
+  autocmd FileType ruby                         setlocal comments=:#\  tw=79
+  autocmd FileType vim                          setlocal et sw=2 sts=2 keywordprg=:help
 
   autocmd Syntax   css  syn sync minlines=50
 
@@ -125,11 +122,6 @@ runtime! viceroy/bundle_settings.vim
 runtime! viceroy/bundle.vim
 
 runtime! macros/matchit.vim
-
-"runtime! autoload/pathogen.vim
-"if exists('g:loaded_pathogen')
-"  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundle'))
-"endif
 
 " TODO: do we want this at all?
 " Hook in the local vimrc

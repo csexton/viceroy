@@ -11,6 +11,8 @@ let b:did_indent = 1
 setlocal indentexpr=GetCSSIndent()
 setlocal indentkeys=0{,0},!^F,o,O
 setlocal nosmartindent
+"setlocal sw=2
+"setlocal sts=2
 
 if exists("*GetCSSIndent")
   finish
