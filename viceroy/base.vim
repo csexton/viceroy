@@ -122,7 +122,14 @@ runtime! viceroy/bundle_settings.vim
 runtime! macros/matchit.vim
 
 " Hook in vundle
-runtime! viceroy/bundle.vim
+runtime! viceroy/bundle_loader.vim
+
+" Load the bundles
+if filereadable(expand('~/.vimrc.bundle'))
+  source ~/.vimrc.bundle
+elseif filereadable(expand('~/.vim/viceroy/bundles.vim'))
+  source ~/.vim/viceroy/bundles.vim
+endif
 
 " Hook in the local vimrc
 if filereadable(expand('~/.vimrc.local'))

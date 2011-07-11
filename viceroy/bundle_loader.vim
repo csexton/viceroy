@@ -1,20 +1,10 @@
-
 if isdirectory(expand("~/.vim/bundle/vundle"))
-  echo "loading vundle"
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
   au BufNewFile,BufRead Bundlefile set filetype=vim
 
   " let Vundle manage Vundle
   Bundle 'gmarik/vundle'
-
-  " Load the bundles
-  if filereadable(expand('~/.vimrc.bundle'))
-    source ~/.vimrc.bundle
-  elseif filereadable(expand('~/.vim/viceroy/bundles.vim'))
-    source ~/.vim/viceroy/bundles.vim
-  endif
-
 else
 
   "Monkey patch the Bundle command
