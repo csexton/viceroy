@@ -1,6 +1,6 @@
 <img src="https://raw.github.com/csexton/viceroy/master/viceroy/logo.png" align="right" />
 
-# Viceroy - Configuration Framework for Vim
+# Viceroy - Vim Configuration Framework
 
 Vceroy is a starter kit for the <a href="http://www.vim.org/">Vim text editor</a>. It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
 
