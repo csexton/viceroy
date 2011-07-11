@@ -1,5 +1,6 @@
+set nocompatible             " be iMproved
 syntax on
-filetype plugin indent on
+filetype off                 " required for vundle
 set autoindent
 set autoread
 set autowrite               " Automatically save before commands like :next and :make
@@ -118,15 +119,16 @@ set background=dark
 " Hook in bundle settings, before we load the bundles
 runtime! viceroy/bundle_settings.vim
 
+runtime! macros/matchit.vim
+
 " Hook in vundle
 runtime! viceroy/bundle.vim
 
-runtime! macros/matchit.vim
-
-" TODO: do we want this at all?
 " Hook in the local vimrc
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
+
+filetype plugin indent on     " required for vundle
 " vim:set ft=vim et tw=78 sw=2 encoding=utf-8
