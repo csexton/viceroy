@@ -2,7 +2,7 @@
 
 # Viceroy - Vim Configuration Framework
 
-Viceroy is a starter kit for the <a href="http://www.vim.org/">Vim text editor</a>. It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
+Viceroy is a starter kit for the [Vim text editor](http://www.vim.org/). It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
 
 Viceroy is not a crutch that experienced vim users would get annoyed at. It is opinionated, but tries to follow best practices of the community. The goal is to have a solid set a defaults with an easy way to customize.
 
@@ -26,11 +26,6 @@ Since Viceroy uses vundle under the covers, adding additional plugins is easy.  
 
     :Bundles
 
-If you want to exclude any of the default bundles that Viceroy installs, they can be removed by adding the following to your `.vimrc.local` file.
-
-    let g:viceroy_skip_bundlename=1
-
-Often annoyed by the process of setting up vim myself and helping get people setup I have thought I would create a better way to get vim to a sensible starting point.
-
+This is supposed to be a community driven project. If you have suggestions or changes please add an [issue](https://github.com/csexton/viceroy/issues), check the [wiki](https://github.com/csexton/viceroy/wiki) or best of all a [pull request](https://github.com/csexton/viceroy/pulls).
 
 
