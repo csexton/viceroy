@@ -19,16 +19,16 @@ if isdirectory(expand("~/.vim/bundle/vundle"))
 else
 
   "Monkey patch the Bundle command, this makes :Bundle a no-op.
-  com! -nargs=+ Bundle
+  command! -nargs=+ Bundle
 
-  echo "Run :BundleInit to install plugins"
+  echo "Run :BundleInstall to install plugins"
   "Only define bundle init if vundle is not loaded
   function s:bundle_init()
     silent exec "!git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle"
     " Reload everything since we just added Vundle
     if filereadable($MYVIMRC)| silent source $MYVIMRC | endif
-    :call s:load_vundle()
-    BundleInstall
+    call s:load_vundle()
+    call vundle#installer#install('', '')
   endfunction
-  command! BundleInit :call s:bundle_init()
+  command! BundleInstall :call s:bundle_init()
 endif

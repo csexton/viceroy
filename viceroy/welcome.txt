@@ -5,9 +5,13 @@
 
 Welcome to Viceroy
 
-If you want to install the plugins you can run:
+Customizations can be made by editing this file:
 
-    :BundleInit
+    ~/.vimrc.local
+
+To install the plugins, start vim and run:
+
+    :BundleInstall
 
  _    _     _    _     _    _     _    _     _    _     _    _
 (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)
