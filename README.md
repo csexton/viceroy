@@ -12,11 +12,16 @@ To install simply run this command (if you trust me, otherwise clone the [git re
 
 Included are a set of plugin bundles that really unleash the power of Vim. They are not installed by default, but can easily be downloaded and installed by running this command in vim:
 
-    :BundleInit
+    :BundleInstall
 
-Local customization is easy. If you want to change your color scheme, or override any of the settings in Viceroy, edit the .vimrc.local file. This is also the place to specify any additional plugin bundles that you want to install.
+Local customization is easy. If you want to change your color scheme, or override any of the settings in Viceroy, edit your `.vimrc.local` file. This is also the place to specify any additional plugin bundles that you want to install.
 
-    " Customizations go in ~/.vimrc.local
+You can edit it by running this command:
+
+    $ vim ~/.vimrc.local
+
+Here an example `.vimrc.local`:
+
     set nofoldenable
     set guifont=Monaco:h14
     Bundle 'snipMate'
@@ -27,5 +32,4 @@ Since Viceroy uses vundle under the covers, adding additional plugins is easy.  
     :Bundles
 
 This is supposed to be a community driven project. If you have suggestions or changes please add an [issue](https://github.com/csexton/viceroy/issues), check the [wiki](https://github.com/csexton/viceroy/wiki) or best of all a [pull request](https://github.com/csexton/viceroy/pulls).
-
 
