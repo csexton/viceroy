@@ -98,6 +98,7 @@ augroup settings
   autocmd FileType gitcommit                    setlocal spell
   autocmd FileType ruby                         setlocal comments=:#\  tw=79
   autocmd FileType vim                          setlocal et sw=2 sts=2 keywordprg=:help
+  autocmd FileType python                       setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
   autocmd Syntax   css  syn sync minlines=50
 

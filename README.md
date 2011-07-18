@@ -2,9 +2,11 @@
 
 # Viceroy - Vim Configuration Framework
 
-Viceroy is a starter kit for the [Vim text editor](http://www.vim.org/). It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
+Viceroy is a configuration of the the [Vim text editor](http://www.vim.org/). It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
 
-Viceroy is not a crutch that experienced vim users would get annoyed at. It is opinionated, but tries to follow best practices of the community. The goal is to have a solid set a defaults with an easy way to customize.
+Who is this for? Teams that want a standard vim configuration to share, particularly for pair programming. People just getting started with vim and want to boot-strap their configuration. And anyone who just wants the batteries included with Vim.
+
+Viceroy is not intended to be a crutch that experienced vim users would get annoyed at. Yes, is opinionated, but tries to follow best practices of the community. The goal is to have a solid set a defaults with an easy way to customize. If you think something should be changed please submit a pull request. Together we can make this project a rock solid base for writing code in Vim.
 
 To install simply run this command (if you trust me, otherwise clone the [git repo](http://github.com/csexton/viceroy)):
 

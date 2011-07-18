@@ -15,6 +15,11 @@ cnoremap          <C-X><C-A> <C-A>
 inoremap          <C-k> <C-O>D
 cnoremap          <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 
+
+" Inserts the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
 " If at end of a line of spaces, delete back to the previous line. Otherwise, <Left>
 inoremap <silent> <C-B> <C-R>=getline('.')=~'^\s*$'&&col('.')>strlen(getline('.'))?"0\<Lt>C-D>\<Lt>Esc>kJs":"\<Lt>Left>"<CR>
 cnoremap          <C-B> <Left>
@@ -33,8 +38,8 @@ vnoremap <silent> <TAB> >gv
 vnoremap <silent> <S-TAB> <gv
 
 " Keep selection when indenting in visual mode
-vnoremap <silent> >> >gv
-vnoremap <silent> << <gv
+"vnoremap <silent> >> >gv
+"vnoremap <silent> << <gv
 
 " Toggle line wrapping
 map <Leader>w  :set nowrap!<CR>
@@ -52,7 +57,8 @@ if exists("loaded_nerd_comments")
 end
 
 if exists("loaded_nerd_tree")
-  map <Leader>n  :NERDTreeToggle<CR>
+  let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+  map <Leader>n :NERDTreeToggle<CR>
 endif
 
 if exists("g:bufexplorer_version")
