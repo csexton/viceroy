@@ -2,17 +2,17 @@
 
 # Viceroy - Vim Configuration Framework
 
-Viceroy is a configuration of the the [Vim text editor](http://www.vim.org/). It is a set of vim scripts that help programmers get the most out of vim with common options that advanced vim users would set.
+Viceroy is a configuration of the [Vim text editor](http://www.vim.org/). It is a set of Vim scripts that help programmers get the most out of Vim with common options that advanced vim users would set.
 
 Who is this for? Teams that want a standard vim configuration to share, particularly for pair programming. People just getting started with vim and want to boot-strap their configuration. And anyone who just wants the batteries included with Vim.
 
-Viceroy is not intended to be a crutch that experienced vim users would get annoyed at. Yes, is opinionated, but tries to follow best practices of the community. The goal is to have a solid set a defaults with an easy way to customize. If you think something should be changed please submit a pull request. Together we can make this project a rock solid base for writing code in Vim.
+Viceroy is not intended to be a crutch that experienced vim users would get annoyed at. Yes, it is opinionated, but tries to follow best practices of the community. The goal is to have a solid set a defaults with an easy way to customize. If you think something should be changed please submit a pull request. Together we can make this project a rock solid base for writing code in Vim.
 
 To install simply run this command (if you trust me, otherwise clone the [git repo](http://github.com/csexton/viceroy)):
 
-    $ curl https://raw.github.com/csexton/viceroy/master/bootstrap.sh -o - | sh
+    $ curl -L https://raw.github.com/csexton/viceroy/master/bootstrap.sh -o - | sh
 
-Included are a set of plugin bundles that really unleash the power of Vim. They are not installed by default, but can easily be downloaded and installed by running this command in vim:
+Included are a set of plugin bundles that really unleash the power of Vim. They are not installed by default, but can easily be downloaded and installed by running this command in Vim:
 
     :BundleInstall
 
