@@ -114,7 +114,7 @@ augroup settings
   autocmd User Fugitive command! -bang -bar -buffer -nargs=* Gpr :Git<bang> pull --rebase <args>
 augroup END
 
-colorscheme ir_black
+colorscheme slate
 set background=dark
 
 " Hook in bundle settings, before we load the bundles
