@@ -24,7 +24,7 @@ set list                    " show trailing whiteshace and tabs
 set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗
 set modelines=5             " Debian likes to disable this
 set mousemodel=popup        "Right mouse button pops up a menu
-set number                  " Show linenumbers
+set nonumber                  " Don't show linenumbers
 set pastetoggle=<F2>
 "set relativenumber
 set scrolloff=1             " Minimal number of screen lines to keep above and below the cursor.
