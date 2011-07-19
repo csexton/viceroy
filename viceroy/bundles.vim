@@ -1,5 +1,4 @@
 Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'csexton/jekyll.vim.git'
 Bundle 'csexton/rvm.vim.git'
 Bundle 'csexton/trailertrash.vim.git'
 Bundle 'csexton/vim-markdown.git'
