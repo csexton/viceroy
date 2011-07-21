@@ -3,7 +3,7 @@ Bundle 'csexton/rvm.vim.git'
 Bundle 'csexton/trailertrash.vim.git'
 Bundle 'csexton/vim-markdown.git'
 Bundle 'ervandew/supertab.git'
-"Bundle 'hallettj/jslint.vim.git' " OSX Lion problems
+Bundle 'csexton/jslint.vim.git'
 Bundle 'int3/vim-extradite.git'
 Bundle 'kana/vim-textobj-user.git'
 Bundle 'kchmck/vim-coffee-script.git'
