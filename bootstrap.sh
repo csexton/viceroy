@@ -6,7 +6,8 @@ if ! which git > /dev/null ; then echo "'git' not available. Please install." &&
 for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old; done
 
 # Checkout viceroy from git into .vim
-git clone http://github.com/csexton/viceroy.git ~/.vim
+# git clone http://github.com/csexton/viceroy.git ~/.vim
+git clone http://github.com/bluegraybox/viceroy.git ~/.vim
 
 # Symlink the config files
 for i in vimrc gvimrc; do echo "Link $i" && ln -sf ~/.vim/$i ~/.$i; done
