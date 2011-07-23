@@ -13,6 +13,8 @@ To install the plugins, start vim and run:
 
     :BundleInstall
 
+To uninstall Viceroy, run: sh ~/.vim/uninstall.sh
+
  _    _     _    _     _    _     _    _     _    _     _    _
 (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)   (.\\//.)
  \ () /     \ () /     \ () /     \ () /     \ () /     \ () /
