@@ -1,3 +1,7 @@
+# Sanity checking
+if ! which vim > /dev/null ; then echo "'vim' not available. Please install." && exit 1 ; fi
+if ! which git > /dev/null ; then echo "'git' not available. Please install." && exit 1 ; fi
+
 # Backup existing vim config
 for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old; done
 
