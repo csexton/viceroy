@@ -1,16 +1,16 @@
-set nocompatible             " be iMproved
-syntax on
-filetype off                 " required for vundle
-set autoindent
-set autoread
+set nocompatible            " Be iMproved
+syntax on                   " Enable syntax highlighting
+filetype off                " required for vundle
+set autoindent              " Keep indent from current line when starting a new line
+set autoread                " Reload a file when it has been changed outside of vim
 set autowrite               " Automatically save before commands like :next and :make
 set backspace=indent,eol,start
 set backupskip+=*.tmp,crontab.*
-set cmdheight=1
+set cmdheight=1             " Command like height is forced to one like
 set complete-=i             " Searching includes can be slow
 set dictionary+=/usr/share/dict/words
 set display=lastline        " When lines are cropped at the screen bottom, show as much as possible
-set expandtab
+set expandtab               " Change tabs to spaces
 set gdefault                " When on, the ":substitute" flag 'g' is default on.
 set guioptions=cg           " Get rid of the scrollbar and toolbar
 set hidden                  " Allow dirty unsaved buffers
@@ -18,32 +18,30 @@ set history=1000            " Remember more history
 set hlsearch                " Highlight searches
 set ignorecase              " Ignore case in searches.
 set incsearch               " Incremental search
-set joinspaces
 set laststatus=2            " Always show status line
 set list                    " show trailing whiteshace and tabs
-set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗
+set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗ " Show whitespace glyphs
 set modelines=5             " Debian likes to disable this
-set mousemodel=popup        "Right mouse button pops up a menu
+set mousemodel=popup        " Right mouse button pops up a menu
 set nonumber                  " Don't show linenumbers
-set pastetoggle=<F2>
 "set relativenumber
 set scrolloff=1             " Minimal number of screen lines to keep above and below the cursor.
 set showcmd                 " Show (partial) command in status line.
 set showmatch               " Show matching brackets.
-set sidescrolloff=5
+set sidescrolloff=5         " The minimal number of screen columns around the cursor
 set smartcase               " Case insensitive searches become sensitive with capitals
 set smarttab                " sw at the start of the line, sts everywhere else
-set spelllang=en_us
+set spelllang=en_us         " Make vim speak 'merican
 set suffixes+=.dvi          " Lower priority in wildcards
 set tags+=../tags,../../tags,../../../tags,../../../../tags
 set timeoutlen=1200         " A little bit more time for macros
 set ttimeoutlen=50          " Make Esc work faster
-set virtualedit=block
-set visualbell
-set wildignore+=*~
-set wildmenu
+set virtualedit=block       " Let the cursor go where there is nothing
+set visualbell              " No more ding sounds
+set wildignore+=*~          " Files to ignore in the wildmenu
+set wildmenu                " List options when command line completing
 set wildmode=longest:full,full
-set winaltkeys=no
+set winaltkeys=no           " Do not use the alt key to access the menus
 
 if has("gui_running")
   set showbreak=⤥
