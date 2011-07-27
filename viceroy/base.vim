@@ -51,9 +51,10 @@ if has("gui_running")
 endif
 
 
-if $TERM == '^\%(screen\|xterm-color\)$' && t_Co == 8
-  set t_Co=16
-endif
+"if $TERM == '^\%(screen\|xterm-color\)$' && t_Co == 8
+"  set t_Co=16
+"endif
+
 
 command! -bar -nargs=0 SudoW   :setl nomod|silent exe 'write !sudo tee % >/dev/null'|let &mod = v:shell_error
 command! -bar -nargs=* -bang W :write<bang> <args>
@@ -115,7 +116,6 @@ augroup settings
 augroup END
 
 colorscheme slate
-set background=dark
 
 " Hook in bundle settings, before we load the bundles
 runtime! viceroy/bundle_settings.vim
