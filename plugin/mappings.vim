@@ -30,8 +30,21 @@ cnoremap          <C-D> <Del>
 
 " If at end of line, fix indent, else <Right>
 inoremap <silent> <C-F> <C-R>=col('.')>strlen(getline('.'))?"\<Lt>C-F>":"\<Lt>Right>"<CR>
-inoremap          <C-E> <End>
 cnoremap          <C-F> <Right>
+
+" Map Control-E to go to the end of the line in insert mode. However, when
+" completion is active you can use CTRL-E to stop it and go back to the
+" originally typed text.
+inoremap          <C-E> <C-R>=InsCtrlE()<CR>
+function! InsCtrlE()
+    try
+        norm! i
+        return "\<c-o>A"
+    catch
+        return "\<c-e>"
+    endtry
+endfunction
+
 
 " Enable TAB indent and SHIFT-TAB unindent
 vnoremap <silent> <TAB> >gv
