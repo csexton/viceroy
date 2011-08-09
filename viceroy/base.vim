@@ -12,7 +12,7 @@ set dictionary+=/usr/share/dict/words
 set display=lastline        " When lines are cropped at the screen bottom, show as much as possible
 set expandtab               " Change tabs to spaces
 set gdefault                " When on, the ":substitute" flag 'g' is default on.
-set guioptions=cg           " Get rid of the scrollbar and toolbar
+set guioptions=egmrtc       " Get rid of the scrollbar, toolbar, and popups
 set hidden                  " Allow dirty unsaved buffers
 set history=1000            " Remember more history
 set hlsearch                " Highlight searches
