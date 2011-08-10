@@ -12,7 +12,7 @@ set dictionary+=/usr/share/dict/words
 set display=lastline        " When lines are cropped at the screen bottom, show as much as possible
 set expandtab               " Change tabs to spaces
 set gdefault                " When on, the ":substitute" flag 'g' is default on.
-set guioptions=egmrtc       " Get rid of the scrollbar, toolbar, and popups
+set guioptions=egmtc        " Get rid of the scrollbar, toolbar, and popups
 set hidden                  " Allow dirty unsaved buffers
 set history=1000            " Remember more history
 set hlsearch                " Highlight searches
@@ -33,7 +33,7 @@ set smartcase               " Case insensitive searches become sensitive with ca
 set smarttab                " sw at the start of the line, sts everywhere else
 set spelllang=en_us         " Make vim speak 'merican
 set suffixes+=.dvi          " Lower priority in wildcards
-set tags+=../tags,../../tags,../../../tags,../../../../tags
+"set tags+=../tags,../../tags,../../../tags,../../../../tags
 set timeoutlen=1200         " A little bit more time for macros
 set ttimeoutlen=50          " Make Esc work faster
 set virtualedit=block       " Let the cursor go where there is nothing
