@@ -26,12 +26,9 @@ Here an example `.vimrc.local`:
 
     set nofoldenable
     set guifont=Monaco:h14
-    Bundle 'snipMate'
     silent! colorscheme solarized
 
-Since Viceroy uses vundle under the covers, adding additional plugins is easy.  Vundle even provides a slick interactive browser that you can use to install bundles.
-
-    :Bundles
+Since Viceroy uses pathogen under the covers, adding additional plugins is easy. Just clone the repo into `~/.vim/bundle`.
 
 This is supposed to be a community driven project. If you have suggestions or changes please add an [issue](https://github.com/csexton/viceroy/issues), check the [wiki](https://github.com/csexton/viceroy/wiki) or best of all a [pull request](https://github.com/csexton/viceroy/pulls).
 
