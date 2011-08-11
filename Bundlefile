@@ -1,0 +1,37 @@
+altercation/vim-colors-solarized.git
+csexton/rvm.vim.git
+csexton/trailertrash.vim.git
+csexton/vim-markdown.git
+ervandew/supertab.git
+csexton/jslint.vim.git
+int3/vim-extradite.git
+kana/vim-textobj-user.git
+kchmck/vim-coffee-script.git
+mattn/gist-vim.git
+mileszs/ack.vim.git
+msanders/cocoa.vim.git
+nelstrom/vim-textobj-rubyblock.git
+pangloss/vim-javascript.git
+scrooloose/nerdcommenter.git
+scrooloose/nerdtree.git
+sjl/gundo.vim.git
+tomtom/tlib_vim.git
+tpope/vim-abolish.git
+tpope/vim-cucumber.git
+tpope/vim-endwise.git
+tpope/vim-fugitive.git
+tpope/vim-haml.git
+tpope/vim-ragtag.git
+tpope/vim-rails.git
+tpope/vim-rake.git
+tpope/vim-repeat.git
+tpope/vim-surround.git
+tpope/vim-unimpaired.git
+
+    
+
+# comment
+   #omm
+vim-ruby/vim-ruby.git
+vim-scripts/bufexplorer.zip.git
+wincent/Command-T.git

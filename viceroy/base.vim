@@ -116,12 +116,12 @@ augroup END
 colorscheme slate
 
 " Hook in bundle settings, before we load the bundles
-runtime! viceroy/bundle_settings.vim
+runtime! viceroy/settings.vim
 
 runtime! macros/matchit.vim
 
-" Hook in vundle
-runtime! viceroy/bundle_loader.vim
+" Hook in pathogen
+call pathogen#infect()
 
 " Hook in the local vimrc
 if filereadable(expand('~/.vimrc.local'))
