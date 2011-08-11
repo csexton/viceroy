@@ -78,6 +78,7 @@ if exists("g:bufexplorer_version")
   map <Leader>e  :BufExplorer<CR>
   nnoremap <D-e> :BufExplorer<CR>
 endif
+  map <Leader>e  :BufExplorer<CR>
 
 if exists('loaded_gundo')
   map <Leader>g  :GundoToggle<CR>
