@@ -2,6 +2,10 @@
 "
 " Plugin loader for pathogen.vim
 "
+" Much of this code is heavily inspired by Vundle, which had an awesome API
+" for installing vim plugins, I just wanted to use pathogen for loading the the
+" scripts (and the other nicities it gives).
+"
 "
 "if exists('g:loaded_pathway') || &cp
 "  finish
@@ -40,17 +44,30 @@ endfunction
 
 function! s:readbundlefile()
   let bundles = []
-  if filereadable(expand('~/.vim/Bundlefile'))
-    for line in readfile(expand('~/.vim/Bundlefile'))
-
+  let disableds = []
+  if filereadable(expand('$HOME/.vim/Bundlefile'))
+    for line in readfile(expand('$HOME/.vim/Bundlefile'))
       let line = s:trim(line)
-
       " Skip comments and blank lines
       if line !~ "^$" && line !~ "^\s*#.*$"
         call add(bundles, s:parse_line(line))
       endif
     endfor
   endif
+  if filereadable(expand('$HOME/.vim-bundles'))
+    for line in readfile(expand('$HOME/.vim-bundles'))
+      let line = s:trim(line)
+      " Filter out lines that start with '~'
+      if line =~# '^\~'
+        let l = s:parse_line(strpart(line,1))
+        echo "Skipping bundle: ". l.name
+        call filter(bundles, 'v:val.name != "'. l.name . '"')
+      " Skip comments and blank lines
+      elseif line !~ "^$" && line !~ "^\s*#.*$"
+        call add(bundles, s:parse_line(line))
+      endif
+    endfor
+
   return bundles
 endfunction
 
@@ -64,7 +81,7 @@ function! s:sync(bang, bundle) abort
       let cmd = '"'.cmd.'"'                          " enclose in quotes
     endif
   else
-    let cmd = 'git clone '.a:bundle.uri.' '.shellescape(a:bundle.path)
+    let cmd = 'git clone --depth 1 '.a:bundle.uri.' '.shellescape(a:bundle.path)
   endif
 
   silent exec '!'.cmd
@@ -80,7 +97,6 @@ function! s:install(bang, bundles) abort
   let [installed, errors] = [[],[]]
 
   for bundle in a:bundles
-    echo "hi"
     let [err_code, status] = s:sync(a:bang, bundle)
     if 0 == err_code
       if 'ok' == status | call add(installed, bundle) | endif
@@ -102,35 +118,16 @@ function! pathway#install(bang, ...) abort
 
   let msg = 'No new bundles were installed'
   if (!empty(installed))
-    let msg = "Installed bundles:\n".join(map(installed, 'v:val.name'),"\n")
+    let msg = "Installed bundles:\n".join(map(installed, 'v:val.name'),"\n")."\n*** Please restart Vim to Enable the new bundles"
   endif
   echo msg
 
 endfunction
 
-
-
-
-com! -nargs=1 Bundle call s:bundle(<args>)
-
 " Commands
-com! -nargs=? -bang BundleInstall
+com! -nargs=? -bang InstallBundles
 \ call pathway#install('!' == '<bang>', <q-args>)
 
 
-" TODO:
-"
-" Create a list of no-bundles from user's Bundlefile, and make sure to
-" exclude files from that list
-"
-" Actually git clone things
-"
-" allow options to git (branch, ref, shallow clone)
 
-"  " Load the bundles
-"  if filereadable(expand('~/.vimrc.bundle'))
-"    source ~/.vimrc.bundle
-"  elseif filereadable(expand('~/.vim/viceroy/bundles.vim'))
-"    source ~/.vim/viceroy/bundles.vim
-"  endif
-
+" vim:set ft=vim ts=8 sw=2 sts=2:

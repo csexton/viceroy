@@ -1,0 +1,29 @@
+*viceroy.vim*  Vim configuration framework and starter kit
+
+Author:  Christopher Sexton <http://www.codeography.com/>
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *viceroy*
+
+This project is to give you the best of vim with out getting in your way. Designed
+to ver very customizable.
+
+Viceroy makes use of |pathway.vim| to install plugin bundles that will be loaded
+by |pathogen.vim|.
+
+FILES                                           *viceroy-files*
+
+                                                *.vimrc.local*
+.vimrc.local      Local vim configuration, this replaces the normal `.vimrc` file
+                and lets you customize your enviroment.
+
+                                                *.vim-bundles*
+.vim-bundles    Local bundle list. Additional vim plugin bundles can be added or
+                excluded here. See |pathway.vim| for more details.
+
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/csexton/viceroy
+
+ vim:tw=78:et:ft=help:norl:

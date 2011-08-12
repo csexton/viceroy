@@ -1,0 +1,45 @@
+*pathway.vim* Bundle installer for |pathogen.vim|
+
+Author:  Christopher Sexton <http://www.codeography.com/>
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                    *pathway*
+
+Install vim plugin bundles from within vim. Basically a vundle for pathogen.
+
+FILES                                           *pathway-files*
+
+Bundlefile              Stored in ~/.vim/, and is a list of all the bundles to install.
+
+.vim-bundles            Stored in ~/, and contains list of all the bundles to install.
+
+
+   Sample `.vim-bundles`: >
+
+     # Repos on github
+     csexton/jekyll.vim
+     tpope/vim-fugitive
+
+     # vim-scripts repos
+     L9
+     rails.vim
+
+     # other git repos
+     git://git.wincent.com/command-t.git
+
+     # Lines staring with ~ will not install any bundles with that name, this
+     # is particularly good if you want to skip any bundles decalred in the
+     # global Bundlefile.
+     ~jslint.vim
+
+COMMANDS                                        *pathway-commands*
+
+                                                *:InstallBundles*
+:InstallBundles         Install plugins to be used with |pathogen.vim|, these
+                        are installed to ~/.vim/bundle
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/csexton/viceroy
+
+ vim:tw=78:et:ft=help:norl:

@@ -121,12 +121,16 @@ runtime! viceroy/settings.vim
 runtime! macros/matchit.vim
 
 " Hook in pathogen
-call pathogen#infect()
+if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
+  source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+  call pathogen#infect()
+endif
 
 " Hook in the local vimrc
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
+
 
 
 filetype plugin indent on     " required for vundle

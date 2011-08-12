@@ -1,3 +1,6 @@
+# Pathogen is required for any of these plugins to work
+tpope/vim-pathogen.git
+
 altercation/vim-colors-solarized.git
 csexton/rvm.vim.git
 csexton/trailertrash.vim.git
@@ -27,11 +30,6 @@ tpope/vim-rake.git
 tpope/vim-repeat.git
 tpope/vim-surround.git
 tpope/vim-unimpaired.git
-
-    
-
-# comment
-   #omm
 vim-ruby/vim-ruby.git
 vim-scripts/bufexplorer.zip.git
 wincent/Command-T.git
