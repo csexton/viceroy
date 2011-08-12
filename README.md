@@ -14,7 +14,7 @@ To install simply run this command (if you trust me, otherwise clone the [git re
 
 Included are a set of plugin bundles that really unleash the power of Vim. They are not installed by default, but can easily be downloaded and installed by running this command in Vim:
 
-    :BundleInstall
+    :InstallBundle
 
 Local customization is easy. If you want to change your color scheme, or override any of the settings in Viceroy, edit your `.vimrc.local` file. This is also the place to specify any additional plugin bundles that you want to install.
 
@@ -29,6 +29,25 @@ Here an example `.vimrc.local`:
     silent! colorscheme solarized
 
 Since Viceroy uses pathogen under the covers, adding additional plugins is easy. Just clone the repo into `~/.vim/bundle`.
+
+Here an example `.vim-bundles`:
+
+    # Repos on github
+    csexton/jekyll.vim
+    tpope/vim-fugitive
+
+    # vim-scripts repos
+    L9
+    rails.vim
+
+    # other git repos
+    git://git.wincent.com/command-t.git
+
+    # If you don't want to use of the the default plugins, you can skip it by prefixing the line with a `~`
+    ~jslint.vim
+    ~gist-vim
+
+The default bundles are listed in Viceroy's [Bundlefile](https://github.com/csexton/viceroy/blob/master/Bundlefile).
 
 This is supposed to be a community driven project. If you have suggestions or changes please add an [issue](https://github.com/csexton/viceroy/issues), check the [wiki](https://github.com/csexton/viceroy/wiki) or best of all a [pull request](https://github.com/csexton/viceroy/pulls).
 
