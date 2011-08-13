@@ -1,7 +1,5 @@
 <img src="https://raw.github.com/csexton/viceroy/master/viceroy/logo.png" align="right" />
 
-# Viceroy - Vim Configuration Framework
-
 Viceroy is a configuration of the [Vim text editor](http://www.vim.org/). It is a set of Vim scripts that help programmers get the most out of Vim with common options that advanced vim users would set.
 
 Who is this for? Teams that want a standard vim configuration to share, particularly for pair programming. People just getting started with vim and want to boot-strap their configuration. And anyone who just wants the batteries included with Vim.
@@ -36,18 +34,19 @@ Here an example `.vim-bundles`:
     csexton/jekyll.vim
     tpope/vim-fugitive
 
-    # vim-scripts repos
+    # Vim Scripts repos
+    # See https://github.com/vim-scripts for a list of the mirrored projects
     L9
     rails.vim
 
-    # other git repos
+    # Arbitrary git repos
     git://git.wincent.com/command-t.git
 
-    # If you don't want to use of the the default plugins, you can skip it by prefixing the line with a `~`
+    # If you don't want to use of the the default plugins, you
+    # can skip it by prefixing the line with a `~`
     ~jslint.vim
     ~gist-vim
 
 The default bundles are listed in Viceroy's [Bundlefile](https://github.com/csexton/viceroy/blob/master/Bundlefile).
 
 This is supposed to be a community driven project. If you have suggestions or changes please add an [issue](https://github.com/csexton/viceroy/issues), check the [wiki](https://github.com/csexton/viceroy/wiki) or best of all a [pull request](https://github.com/csexton/viceroy/pulls).
-
