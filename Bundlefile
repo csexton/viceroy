@@ -15,11 +15,11 @@ mileszs/ack.vim
 msanders/cocoa.vim
 nelstrom/vim-textobj-rubyblock
 pangloss/vim-javascript
-scrooloose/nerdcommenter
 scrooloose/nerdtree
 sjl/gundo.vim
 tomtom/tlib_vim
 tpope/vim-abolish
+tpope/vim-commentary
 tpope/vim-cucumber
 tpope/vim-endwise
 tpope/vim-fugitive

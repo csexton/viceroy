@@ -12,7 +12,7 @@ To install simply run this command (if you trust me, otherwise clone the [git re
 
 Included are a set of plugin bundles that really unleash the power of Vim. They are not installed by default, but can easily be downloaded and installed by running this command in Vim:
 
-    :InstallBundles
+    :BundleInstall
 
 Local customization is easy. If you want to change your color scheme, or override any of the settings in Viceroy, edit your `.vimrc.local` file. This is also the place to specify any additional plugin bundles that you want to install.
 
