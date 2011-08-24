@@ -111,6 +111,8 @@ augroup settings
   autocmd User Rails Rnavcommand support spec/support features/support -default=env
   autocmd User Rails Rnavcommand sass app/sass -suffix=.scss -default=model()
   autocmd User Fugitive command! -bang -bar -buffer -nargs=* Gpr :Git<bang> pull --rebase <args>
+
+  autocmd FileType ruby imap <C-l> <Space>=><Space>
 augroup END
 
 colorscheme slate
@@ -118,6 +120,7 @@ colorscheme slate
 " Hook in bundle settings, before we load the bundles
 runtime! viceroy/settings.vim
 
+runtime! plugin/matchit.vim
 runtime! macros/matchit.vim
 
 " Hook in pathogen

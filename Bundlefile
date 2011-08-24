@@ -2,11 +2,12 @@
 tpope/vim-pathogen
 
 altercation/vim-colors-solarized
+csexton/jslint.vim
 csexton/rvm.vim
 csexton/trailertrash.vim
 csexton/vim-markdown
 ervandew/supertab
-csexton/jslint.vim
+godlygeek/tabular
 int3/vim-extradite
 kana/vim-textobj-user
 kchmck/vim-coffee-script
@@ -19,6 +20,7 @@ scrooloose/nerdtree
 sjl/gundo.vim
 tomtom/tlib_vim
 tpope/vim-abolish
+tpope/vim-bundler
 tpope/vim-commentary
 tpope/vim-cucumber
 tpope/vim-endwise

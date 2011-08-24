@@ -125,7 +125,7 @@ function! pathway#install(bang, ...) abort
 endfunction
 
 " Commands
-com! -nargs=? -bang BundleInstall
+com! -nargs=? -bang InstallBundles
 \ call pathway#install('!' == '<bang>', <q-args>)
 
 
