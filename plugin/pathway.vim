@@ -112,7 +112,7 @@ function! pathway#install(bang, ...) abort
   let bundles = s:readbundlefile()
 
   let [installed, errors] = s:install(a:bang, bundles)
-  if empty(errors) | redraw! | end
+  if empty(errors) | redraw! | endif
   " TODO: handle error: let user know hen they need to restart Vim
   "call vundle#config#require(bundles)
 
