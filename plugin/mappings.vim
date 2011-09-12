@@ -72,6 +72,7 @@ end
 if exists("loaded_nerd_tree")
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
   map <Leader>n :NERDTreeToggle<CR>
+  map <D-d> :NERDTreeToggle<CR>
 endif
 
 if exists("g:bufexplorer_version")
