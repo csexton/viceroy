@@ -23,19 +23,21 @@ endfunction
 
 function! s:parse_line(arg)
   let arg = a:arg
-  if    arg =~? '^\s*\(gh\|github\):\S\+'
-        \  || arg =~? '^[a-z0-9][a-z0-9-]*/[^/]\+$'
-    let uri = 'https://github.com/'.split(arg, ':')[-1]
-    let name = substitute(split(uri,'\/')[-1], '\.git\s*$','','i')
-  elseif arg =~? '^\s*\(git@\|git://\)\S\+'
-        \   || arg =~? '\(file\|https\?\)://'
-        \   || arg =~? '\.git\s*$'
-    let uri = arg
-    let name = split( substitute(uri,'/\?\.git\s*$','','i') ,'\/')[-1]
-  else
-    let name = arg
-    let uri  = 'https://github.com/vim-scripts/'.name.'.git'
-  endif
+"  if arg =~? '^\s*\(gh\|github\):\S\+'
+"        \  || arg =~? '^[a-z0-9][a-z0-9-]*/[^/]\+$'
+"    let uri = 'https://github.com/'.split(arg, ':')[-1]
+"    let name = substitute(split(uri,'\/')[-1], '\.git\s*$','','i')
+"  elseif arg =~? '^\s*\(git@\|git://\)\S\+'
+"        \   || arg =~? '\(file\|https\?\)://'
+"        \   || arg =~? '\.git\s*$'
+"    let uri = arg
+"    let name = split( substitute(uri,'/\?\.git\s*$','','i') ,'\/')[-1]
+"  else
+"    let name = arg
+"    let uri  = 'https://github.com/vim-scripts/'.name.'.git'
+"  endif
+let name = arg
+let uri  = 'https://github.com/'.name.'.git'
 
   let path = g:bundle_dir . "/" . name
   return {'name': name, 'uri': uri, 'path':path }
