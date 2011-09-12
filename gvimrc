@@ -5,7 +5,7 @@ if has("gui_macvim")
 
   " Remap Command-T for CommandT
   if exists("g:command_t_loaded")
-    macmenu &File.New\ Tab key=<nop>
+    macmenu &File.New\ Tab key=<D-S-t>
     map <D-t> :CommandT<CR>
   endif
 
