@@ -11,7 +11,7 @@ Customizations can be made by editing this file:
 
 To install the plugins, start vim and run:
 
-    :BundleInstall
+    :InstallBundle
 
 To uninstall Viceroy, run: sh ~/.vim/uninstall.sh
 
