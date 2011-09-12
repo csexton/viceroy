@@ -71,7 +71,8 @@ end
 
 if exists("loaded_nerd_tree")
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-  map <Leader>n :NERDTreeToggle<CR>
+  " Toggle the project Drawer
+  map <Leader>d :NERDTreeToggle<CR>
   map <D-d> :NERDTreeToggle<CR>
 endif
 
