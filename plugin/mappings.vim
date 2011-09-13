@@ -15,7 +15,6 @@ cnoremap          <C-X><C-A> <C-A>
 inoremap          <C-k> <C-O>D
 cnoremap          <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 
-
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
@@ -63,31 +62,24 @@ map <Leader>l  :set nonumber!<CR>
 " Browse the directory of the current file
 "map <Leader>b  :edit %:h<CR>
 
-if exists("loaded_nerd_comments")
-  nmap \\   <Plug>NERDCommenterInvert
-  xmap \\   <Plug>NERDCommenterInvert
-  map <D-/> <plug>NERDCommenterToggle<CR>
-end
-
-if exists("loaded_nerd_tree")
+"if exists("loaded_nerd_tree")
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
   " Toggle the project Drawer
   map <Leader>d :NERDTreeToggle<CR>
   map <D-d> :NERDTreeToggle<CR>
-endif
+"endif
 
-if exists("g:bufexplorer_version")
+"if exists("g:bufexplorer_version")
   map <Leader>e  :BufExplorer<CR>
   nnoremap <D-e> :BufExplorer<CR>
-endif
-  map <Leader>e  :BufExplorer<CR>
+"endif
 
-if exists('loaded_gundo')
+"if exists('loaded_gundo')
   map <Leader>g  :GundoToggle<CR>
   command! Gundo :GundoToggle
-endif
+"endif
 
-if exists("g:command_t_loaded")
+"if exists("g:command_t_loaded")
   map <Leader>t :CommandT<CR>
-endif
+"endif
 
