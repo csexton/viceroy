@@ -109,11 +109,5 @@ augroup settings
   autocmd FileType ruby imap <C-l> <Space>=><Space>
 augroup END
 
-colorscheme slate
-
-" Hook in the local vimrc
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
 
 " vim:set ft=vim et tw=78 sw=2 encoding=utf-8

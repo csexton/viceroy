@@ -1,8 +1,10 @@
 """ Mappings
-let mapleader = ","
+if !exists('g:viceroy_dont_remap_leader')
+  let mapleader = ","
+endif
 nnoremap          j gj
 nnoremap          k gk
-map               Y y$
+nnoremap          Y y$
 nnoremap <silent> <C-L> :nohls<CR><C-L>
 inoremap          <C-C> <Esc>`^
 cnoremap          <C-O> <Up>
@@ -62,24 +64,20 @@ map <Leader>l  :set nonumber!<CR>
 " Browse the directory of the current file
 "map <Leader>b  :edit %:h<CR>
 
-"if exists("loaded_nerd_tree")
+if !exists('g:bundle_dir') | let g:bundle_dir =  expand('$HOME/.vim/bundle') | endif
+if isdirectory(g:bundle_dir)
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
   " Toggle the project Drawer
   map <Leader>d :NERDTreeToggle<CR>
   map <D-d> :NERDTreeToggle<CR>
-"endif
 
-"if exists("g:bufexplorer_version")
   map <Leader>e  :BufExplorer<CR>
   nnoremap <D-e> :BufExplorer<CR>
-"endif
 
-"if exists('loaded_gundo')
   map <Leader>g  :GundoToggle<CR>
+  map <D-g>  :GundoToggle<CR>
   command! Gundo :GundoToggle
-"endif
 
-"if exists("g:command_t_loaded")
   map <Leader>t :CommandT<CR>
-"endif
+endif
 
