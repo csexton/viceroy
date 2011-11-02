@@ -37,7 +37,7 @@ set timeoutlen=1200         " A little bit more time for macros
 set ttimeoutlen=50          " Make Esc work faster
 set virtualedit=block       " Let the cursor go where there is nothing
 set visualbell              " No more ding sounds
-set wildignore+=*~,node_modules " Files to ignore in the wildmenu
+set wildignore+=*~,node_modules,*/.git/*,*/.hg/*,*/.svn/* " Files to ignore in the wildmenu
 set wildmenu                " List options when command line completing
 set wildmode=longest:full,full
 set winaltkeys=no           " Do not use the alt key to access the menus
