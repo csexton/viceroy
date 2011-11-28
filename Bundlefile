@@ -1,7 +1,7 @@
 # Pathogen is required for any of these plugins to work
 tpope/vim-pathogen
 
-altercation/vim-colors-solarized
+ap/vim-css-color
 csexton/jslint.vim
 csexton/trailertrash.vim
 csexton/vim-markdown
