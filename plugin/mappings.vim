@@ -14,12 +14,13 @@ inoremap          <C-X><C-@> <C-A>
 inoremap          <C-A> <C-O>^
 cnoremap          <C-A> <Home>
 cnoremap          <C-X><C-A> <C-A>
+cnoremap          <C-P> <Up>
+cnoremap          <C-N> <Down>
 inoremap          <C-k> <C-O>D
 cnoremap          <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 
 " Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+"cmap <C-F> <C-R>=expand("%:p:h") . "/" <CR>
 
 " If at end of a line of spaces, delete back to the previous line. Otherwise, <Left>
 inoremap <silent> <C-B> <C-R>=getline('.')=~'^\s*$'&&col('.')>strlen(getline('.'))?"0\<Lt>C-D>\<Lt>Esc>kJs":"\<Lt>Left>"<CR>
