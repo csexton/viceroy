@@ -80,5 +80,7 @@ if isdirectory(g:bundle_dir)
   command! Gundo :GundoToggle
 
   map <Leader>t :CommandT<CR>
+  nnoremap <silent> <Leader>y :YRShow<CR>
+  nnoremap <silent> <D-y> :YRShow<CR>
 endif
 
