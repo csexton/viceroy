@@ -73,7 +73,7 @@ function! s:readbundlefile()
 endfunction
 
 function! s:sync(bang, bundle) abort
-  if isdirectory(expand(a:bundle.path.'/.git/'))
+  if isdirectory(expand(a:bundle.path.'/.git/', 1))
     if !(a:bang) | return [0, 'skip'] | endif
     let cmd = 'cd '.shellescape(a:bundle.path).' && git pull'
 
@@ -129,6 +129,11 @@ endfunction
 com! -nargs=? -bang InstallBundles
 \ call pathway#install('!' == '<bang>', <q-args>)
 
+if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
+  " Commands
+  com! -nargs=? -bang InstallHelptags
+  \ call pathogen#helptags()
+endif
 
 
 " vim:set ft=vim ts=8 sw=2 sts=2:
