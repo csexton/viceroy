@@ -4,7 +4,6 @@ set autoindent              " Keep indent from current line when starting a new 
 set autoread                " Reload a file when it has been changed outside of vim
 set autowrite               " Automatically save before commands like :next and :make
 set backspace=indent,eol,start
-set backupskip+=*.tmp,crontab.*
 set cmdheight=1             " Command like height is forced to one like
 set complete-=i             " Searching includes can be slow
 set dictionary+=/usr/share/dict/words
@@ -37,10 +36,34 @@ set timeoutlen=1200         " A little bit more time for macros
 set ttimeoutlen=50          " Make Esc work faster
 set virtualedit=block       " Let the cursor go where there is nothing
 set visualbell              " No more ding sounds
-set wildignore+=*~,node_modules,*/.git/*,*/.hg/*,*/.svn/* " Files to ignore in the wildmenu
-set wildmenu                " List options when command line completing
-set wildmode=longest:full,full
 set winaltkeys=no           " Do not use the alt key to access the menus
+
+" Wildmenu completion
+set wildmenu
+set wildmode=list:longest
+set wildmode=longest:full,full
+set wildignore+=*~
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl                            " compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+set wildignore+=*.DS_Store                       " OSX bullshit
+set wildignore+=*.luac                           " Lua byte code
+set wildignore+=migrations                       " Django migrations
+set wildignore+=*.pyc                            " Python byte code
+set wildignore+=*.orig                           " Merge resolution files
+
+" Backups
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+set backup                        " enable backups
+set noswapfile                    " It's 2012, Vim.
+set backupskip=/tmp/*,/private/tmp/*" " Make Vim able to edit crontab files again.
+set backupskip+=*.tmp,crontab.*
+
 
 if !exists('g:syntax_on')
   syntax on
