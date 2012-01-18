@@ -11,6 +11,8 @@ cnoremap          <C-O> <Up>
 inoremap          ø <C-O>o
 inoremap          <M-o> <C-O>o
 inoremap          <C-X><C-@> <C-A>
+
+" Sacrilege: emacs like bindings in command and insert
 inoremap          <C-A> <C-O>^
 cnoremap          <C-A> <Home>
 cnoremap          <C-X><C-A> <C-A>
