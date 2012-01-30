@@ -1,26 +1,22 @@
 # Pathogen is required for any of these plugins to work
 tpope/vim-pathogen
 
-ap/vim-css-color
-csexton/jslint.vim
+# The following are the default bundles installed with viceroy, if you want
+# to add any additional bundles you can in ~/.vim-bundles, see the README for
+# more details.
+
 csexton/trailertrash.vim
 csexton/vim-markdown
 ervandew/supertab
 godlygeek/tabular
-int3/vim-extradite
-kana/vim-textobj-user
 kchmck/vim-coffee-script
 mattn/gist-vim
 mileszs/ack.vim
-msanders/cocoa.vim
-nelstrom/vim-textobj-rubyblock
-pangloss/vim-javascript
 scrooloose/nerdtree
 sjl/gundo.vim
-tomtom/tlib_vim
 tpope/vim-abolish
 tpope/vim-bundler
-tpope/vim-commentary
+pangloss/vim-javascript
 tpope/vim-cucumber
 tpope/vim-endwise
 tpope/vim-fugitive
@@ -29,9 +25,9 @@ tpope/vim-ragtag
 tpope/vim-rails
 tpope/vim-rake
 tpope/vim-repeat
-tpope/vim-rvm
 tpope/vim-surround
 tpope/vim-unimpaired
 vim-ruby/vim-ruby
+vim-scripts/YankRing.vim
 vim-scripts/bufexplorer.zip
 wincent/Command-T
