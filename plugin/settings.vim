@@ -21,7 +21,6 @@ set list                    " show trailing whiteshace and tabs
 set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗ " Show whitespace glyphs
 set modelines=5             " Debian likes to disable this
 set mousemodel=popup        " Right mouse button pops up a menu
-set nonumber                  " Don't show linenumbers
 "set relativenumber
 set scrolloff=1             " Minimal number of screen lines to keep above and below the cursor.
 set showcmd                 " Show (partial) command in status line.
@@ -56,13 +55,18 @@ set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
 " Backups
-set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
 set directory=~/.vim/tmp/swap//   " swap files
 set backup                        " enable backups
 set noswapfile                    " It's 2012, Vim.
 set backupskip=/tmp/*,/private/tmp/*" " Make Vim able to edit crontab files again.
 set backupskip+=*.tmp,crontab.*
+
+" Persistant Undo
+set undodir=~/.vim/tmp/undo//     " undo files
+set undofile
+set undolevels=1000               "maximum number of changes that can be undone
+set undoreload=10000              "maximum number lines to save for undo on a buffer reload
 
 
 if !exists('g:syntax_on')
