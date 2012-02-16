@@ -76,11 +76,6 @@ function! s:sync(bang, bundle) abort
   if isdirectory(expand(a:bundle.path.'/.git/', 1))
     if !(a:bang) | return [0, 'skip'] | endif
     let cmd = 'cd '.shellescape(a:bundle.path).' && git pull'
-
-    if (has('win32') || has('win64'))
-      let cmd = substitute(cmd, '^cd ','cd /d ','')  " add /d switch to change drives
-      let cmd = '"'.cmd.'"'                          " enclose in quotes
-    endif
   else
     let cmd = 'git clone --depth 1 '.a:bundle.uri.' '.shellescape(a:bundle.path)
   endif
