@@ -62,11 +62,13 @@ set noswapfile                    " It's 2012, Vim.
 set backupskip=/tmp/*,/private/tmp/*" " Make Vim able to edit crontab files again.
 set backupskip+=*.tmp,crontab.*
 
-" Persistant Undo
-set undodir=~/.vim/tmp/undo//     " undo files
-set undofile
-set undolevels=1000               "maximum number of changes that can be undone
-set undoreload=10000              "maximum number lines to save for undo on a buffer reload
+if has('persistent_undo')
+  " Persistant Undo
+  set undodir=~/.vim/tmp/undo//     " undo files
+  set undofile
+  set undolevels=1000               "maximum number of changes that can be undone
+  set undoreload=10000              "maximum number lines to save for undo on a buffer reload
+endif
 
 
 if !exists('g:syntax_on')
