@@ -81,6 +81,11 @@ if has("gui_running")
   set background=dark
 endif
 
+" Set the grep program
+if &grepprg ==# 'grep -n $* /dev/null'
+  set grepprg=grep\ -rnH\ --exclude='.*.swp'\ --exclude='*~'\ --exclude='*.log'\ --exclude=tags\ $*\ /dev/null
+endif
+
 " Load matchit
 runtime! plugin/matchit.vim
 runtime! macros/matchit.vim
