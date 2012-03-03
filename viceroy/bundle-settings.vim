@@ -33,3 +33,5 @@ let g:solarized_visibility="low"     " Let trailer trash handle whitespace
 
 let vimclojure#HighlightBuiltins = 1 " Highlight Clojure builtins
 let vimclojure#ParenRainbow = 1      " Rainbow parentheses
+
+let g:yankring_history_file = '.vim-yankring-history'
