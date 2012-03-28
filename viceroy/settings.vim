@@ -18,7 +18,7 @@ set ignorecase              " Ignore case in searches.
 set incsearch               " Incremental search
 set laststatus=2            " Always show status line
 set list                    " show trailing whiteshace and tabs
-set listchars=tab:»\ ,trail:·,extends:→,precedes:←,nbsp:‗ " Show whitespace glyphs
+set listchars=tab:»\ ,trail:\ ,extends:→,precedes:←,nbsp:‗ " Show whitespace glyphs
 set modelines=5             " Debian likes to disable this
 set mousemodel=popup        " Right mouse button pops up a menu
 "set relativenumber

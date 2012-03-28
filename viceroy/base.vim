@@ -3,6 +3,9 @@ set nocompatible            " Be iMproved
 " Pick a decent default colorscheme
 colorscheme slate
 
+" Hook in vim settings, before we run vimrc.local, to allow overriding options
+runtime! viceroy/settings.vim
+
 " Hook in bundle settings, before we load the bundles
 runtime! viceroy/bundle-settings.vim
 
