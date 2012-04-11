@@ -86,3 +86,5 @@ if isdirectory(g:bundle_dir)
   nnoremap <silent> <D-y> :YRShow<CR>
 endif
 
+" Jump to the last posistion in the buffer
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
