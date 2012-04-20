@@ -88,3 +88,5 @@ endif
 
 " Jump to the last posistion in the buffer
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+" Jump back to the top on git commit messages
+autocmd BufReadPost COMMIT_EDITMSG exe "normal! gg"
