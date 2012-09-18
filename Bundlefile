@@ -28,6 +28,5 @@ tpope/vim-repeat
 tpope/vim-surround
 tpope/vim-unimpaired
 vim-ruby/vim-ruby
-vim-scripts/YankRing.vim
 vim-scripts/bufexplorer.zip
 wincent/Command-T
