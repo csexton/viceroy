@@ -55,8 +55,8 @@ set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
 " Backups
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
+set backupdir=~/.vim/tmp/backup/  " backups
+set directory=~/.vim/tmp/swap/    " swap files
 set backup                        " enable backups
 set noswapfile                    " It's 2012, Vim.
 set backupskip=/tmp/*,/private/tmp/*" " Make Vim able to edit crontab files again.
@@ -126,6 +126,7 @@ augroup settings
   autocmd FileType ruby                         setlocal comments=:#\  tw=79
   autocmd FileType vim                          setlocal et sw=2 sts=2 keywordprg=:help
   autocmd FileType python                       setlocal softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+  autocmd FileType c                            setlocal et sw=2 sts=2
 
   autocmd Syntax   css  syn sync minlines=50
 
