@@ -37,3 +37,8 @@ let g:yankring_history_file = '.vim-yankring-history'
 
 let g:SuperTabMappingForward  = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
+
+" Fix command-t in tmux
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+endif
