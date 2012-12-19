@@ -110,7 +110,7 @@ augroup settings
   autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
         \ if isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
 
-  autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+  "autocmd BufNewFile,BufRead *.scss             set ft=scss.css
   autocmd BufNewFile,BufRead *.md               set ft=markdown
   autocmd BufNewFile,BufRead *.haml,*.jst       set ft=haml
   autocmd BufNewFile,BufRead *.feature,*.story  set ft=cucumber
@@ -121,7 +121,6 @@ augroup settings
   autocmd FileType html,xhtml,css,scss.css      setlocal et sw=2 sts=2
   autocmd FileType eruby,yaml,ruby              setlocal et sw=2 sts=2
   autocmd FileType cucumber                     setlocal et sw=2 sts=2
-  "autocmd FileType cucumber                     inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
   autocmd FileType gitcommit                    setlocal spell
   autocmd FileType ruby                         setlocal comments=:#\  tw=79
   autocmd FileType vim                          setlocal et sw=2 sts=2 keywordprg=:help
@@ -130,8 +129,6 @@ augroup settings
 
   autocmd Syntax   css  syn sync minlines=50
 
-  "autocmd User Rails nnoremap <buffer> <D-r> :<C-U>Rake<CR>
-  "autocmd User Rails nnoremap <buffer> <D-R> :<C-U>.Rake<CR>
   autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
   autocmd User Rails Rnavcommand steps features/step_definitions -suffix=_steps.rb -default=web
   autocmd User Rails Rnavcommand blueprint spec/blueprints -suffix=_blueprint.rb -default=model()
