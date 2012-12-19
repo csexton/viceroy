@@ -10,6 +10,7 @@ csexton/vim-markdown
 ervandew/supertab
 godlygeek/tabular
 kchmck/vim-coffee-script
+mattn/webapi-vim
 mattn/gist-vim
 mileszs/ack.vim
 scrooloose/nerdtree
