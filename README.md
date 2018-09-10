@@ -42,7 +42,7 @@ Here is an example `.vim-bundles`:
     # Arbitrary git repos
     git://git.wincent.com/command-t.git
 
-    # If you don't want to use of the the default plugins, you
+    # If you don't want to use one of the default plugins, you
     # can skip it by prefixing the line with a `~`
     ~jslint.vim
     ~gist-vim
